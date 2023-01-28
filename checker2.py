@@ -9,7 +9,7 @@ def request_api_data(query_char):
         raise RuntimeError(f'Error fetching: {res.status_code}, check the API')
     return res
 
-
+# Counting how many times the password has been leaked
 def get_password_leaks_count(hashes, hash_to_check):
     hashes = (line.split(':') for line in hashes.text.splitlines())
     for h, count in hashes:
