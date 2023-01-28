@@ -37,8 +37,6 @@ def main(args):
 if __name__ == '__main__':
     while True:
         password = input('type "break" to exit\npassword: ')
-
         if password == 'break':
             break
-
         main(password)
