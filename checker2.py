@@ -24,7 +24,7 @@ def pwned_api_check(password):
     response = request_api_data(first5_char)
     return get_password_leaks_count(response, tail)
 
-
+# Printing out the results
 def main(args):
     count = pwned_api_check(args)
     if count:
@@ -32,7 +32,8 @@ def main(args):
     else:
         print(f'{args} was not found')
 
-
+# Only execute if it is the main program.
+# Asking the user for the password or break to exit out.
 if __name__ == '__main__':
     while True:
         password = input('type "break" to exit\npassword: ')
